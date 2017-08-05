@@ -3,7 +3,191 @@
     <string name="title_home">ポスター</string>
     <string name="title_dashboard">参加ブルワリー</string>
     <string name="title_notifications">イベント概要</string>
+    <string name="facebook_app_id">267412426697068</string>
+    <string name="action_settings">Facebook設定</string>
+    <string name="news">最新情報</string>
+    <string name="title_activity_top">ビアフェス秋田</string>
+    <string name="title_activity_post">Facebook投稿</string>
+    <string name="title_activity_oauth">Twitter認証</string>
+    <string name="title">Title</string>
+    <string name="tag">tag</string>
+    <string name="desc">desc</string>
+    <string name="content_description_poster">ポスター</string>
+    <string name="content_description_beer">ビールアイコン</string>
+    <string name="drink">飲んだ!</string>
+    <string name="cancel">キャンセル</string>
+    <string name="post">　投　稿　</string>
+    <string name="title_activity_facebook_setting">Facebook設定</string>
+    <string name="title_activity_camera">カメラ</string>
+    <string name="title_setting">設定</string>
+    <string name="selectGalary">ギャラリー選択</string>
+    <string name="start_photo">撮影</string>
+    <string name="title_logout">ログアウト</string>
+    <string name="facebook_not_settings">Facebook投稿 未設定</string>
+    <string name="facebook_profile">FacebookProfile</string>
+    <string name="twitter_consumer_key">l44tIZ6eMNeNr8e180nQ</string>
+    <string name="twitter_consumer_secret">klCbJaGgkr7Odfked4chl1TfqVoc6MN4zrQfQw0</string>
+    <string name="twitter_callback_url">beerfesakita://twitter</string>
+    <string name="addPhoto">写真追加</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="authentication">認証中</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Post ID: %1$s</string>
+    <string name="ok">OK</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="post_success">投稿に成功しました</string>
+    <string name="post_error">投稿に失敗しました</string>
+    <string name="authentication_title">認証</string>
+    <string name="authentication_ok">認証成功</string>
+    <string name="fb_login">Facebookにログインしてください</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="brewery_site_list">
+        <item>http://www.2002cb.co.jp/</item>
+        <item>http://www.wakasaimo.com/onidensetsu/</item>
+        <item>http://www.oirase.or.jp/beer/beer.htm</item>
+        <item>http://www.sekinoichi.co.jp/beer/</item>
+        <item>http://www.sakurabrewery.beer/</item>
+        <item>http://www.v-toono.jp/kamihei/zumona.html</item>
+        <item>http://www.orae.net/</item>
+        <item>http://www.warabi.or.jp/beer/top.php</item>
+        <item>http://www.aqula.co.jp/</item>
+        <item>http://aka.gmobb.jp/yakurai/products/beer/index.html</item>
+        <item>http://www.onikoube.com/shop/</item>
+        <item>http://www.ja-miyagisennan.jp/einou/1417.html</item>
+        <item>http://www.gassan-shop.com/</item>
+        <item>http://www.f-beer.com/</item>
+        <item>http://www.g-select.info/user_data/beer.php</item>
+        <item>http://www.ch-kamiya.jp/shop/liquor/brewery.html</item>
+        <item>http://blog.ushitora.jp/</item>
+        <item>http://www.coedobrewery.com/</item>
+        <item>http://www.ikspiari.com/shop/harvest/index.html</item>
+        <item>http://www.yokohamabeer.com/</item>
+        <item>http://www.sanktgallenbrewery.com/</item>
+        <item>http://www.kumazawa.jp/shonan-beer/</item>
+        <item>http://www.hakone-beer.com/</item>
+        <item>http://www.swanlake.co.jp/main/</item>
+        <item>http://www.jo-beer.com/</item>
+        <item>http://www.nihonkai-club.com/index.shtml</item>
+        <item>http://www.fujizakura-beer.jp/</item>
+        <item>http://www.tamamura-honten.co.jp/</item>
+        <item>http://www.tomi-kosya.com/ohlaho-beer/ohlaho-beer.html</item>
+        <item>http://yonasato.com/</item>
+        <item>http://www.ms-beer.co.jp/index.html</item>
+        <item>http://beerbuddy.blog.fc2.com/</item>
+        <item>http://ameblo.jp/y-market758/</item>
+        <item>http://www.biyagura.jp/</item>
+        <item>http://www.minoh-beer.jp/</item>
+        <item>http://www.konishi.be/</item>
+        <item>http://www.nagisa.co.jp/</item>
+        <item>http://www.miyajima-beer.com/</item>
+        <item>http://g-beer.jp/gbeer/</item>
+        <item>http://www.rakuten.co.jp/beerhearun/</item>
+        <item>http://www.umenishiki.com/products/promotions/beer/tokusyu.html</item>
+        <item>http://mojibeer.ntf.ne.jp/</item>
+        <item>http://www.hideji-beer.jp/</item>
+        <item>http://www.shiroyama-g.co.jp/promotion/brewery/</item>
+        <item>http://www.helios-syuzo.co.jp/</item>
+    </string-array>
+
+    <string-array name="brewery_list">
+        <item>ノースアイランドビール</item>
+        <item>鬼伝説地ビール</item>
+        <item>奥入瀬ビール</item>
+        <item>いわて蔵ビール</item>
+        <item>さくらブルワリー</item>
+        <item>遠野麦酒ZUMONA</item>
+        <item>湖畔の杜ビール</item>
+        <item>田沢湖ビール</item>
+        <item>あくらビール</item>
+        <item>やくらいビール</item>
+        <item>鳴子の風</item>
+        <item>仙南クラフトビール</item>
+        <item>地ビール月山</item>
+        <item>みちのく福島路ビール</item>
+        <item>猪苗代地ビール</item>
+        <item>牛久シャトービール</item>
+        <item>うしとらブルワリー</item>
+        <item>コエドブルワリー</item>
+        <item>ハーヴェスト・ムーン</item>
+        <item>横浜ビール</item>
+        <item>サンクトガーレン</item>
+        <item>湘南ビール</item>
+        <item>箱根ビール</item>
+        <item>スワンレイクビール</item>
+        <item>城端麦酒</item>
+        <item>奥能登ビール_日本海倶楽部</item>
+        <item>富士桜高原麦酒</item>
+        <item>志賀高原ビール</item>
+        <item>オラホビール</item>
+        <item>よなよなエール</item>
+        <item>南信州ビール</item>
+        <item>ビアバディ</item>
+        <item>Y.Marketブルワリー</item>
+        <item>伊勢角屋麦酒</item>
+        <item>箕面ビール</item>
+        <item>KONISHIビール</item>
+        <item>ナギサビール</item>
+        <item>宮島ビール</item>
+        <item>大山Gビール</item>
+        <item>松江地ビールビアへるん</item>
+        <item>梅錦ビール</item>
+        <item>門司港地ビール工房</item>
+        <item>ひでじビール</item>
+        <item>城山ブルワリー</item>
+        <item>ヘリオスビール</item>
+    </string-array>
+
+    <string-array name="brewery_place_list">
+        <item>北海道</item>
+        <item>北海道</item>
+        <item>青森県</item>
+        <item>岩手県</item>
+        <item>岩手県</item>
+        <item>岩手県</item>
+        <item>秋田県</item>
+        <item>秋田県</item>
+        <item>秋田県</item>
+        <item>宮城県</item>
+        <item>宮城県</item>
+        <item>宮城県</item>
+        <item>山形県</item>
+        <item>福島県</item>
+        <item>福島県</item>
+        <item>茨城県</item>
+        <item>栃木県</item>
+        <item>埼玉県</item>
+        <item>千葉県</item>
+        <item>神奈川県</item>
+        <item>神奈川県</item>
+        <item>神奈川県</item>
+        <item>神奈川県</item>
+        <item>新潟県</item>
+        <item>富山県</item>
+        <item>石川県</item>
+        <item>山梨県</item>
+        <item>長野県</item>
+        <item>長野県</item>
+        <item>長野県</item>
+        <item>長野県</item>
+        <item>静岡県</item>
+        <item>愛知県</item>
+        <item>三重県</item>
+        <item>大阪府</item>
+        <item>兵庫県</item>
+        <item>和歌山県</item>
+        <item>広島県</item>
+        <item>鳥取県</item>
+        <item>島根県</item>
+        <item>愛媛県</item>
+        <item>福岡県</item>
+        <item>宮崎県</item>
+        <item>鹿児島県</item>
+        <item>沖縄県</item>
+    </string-array>
+
 </resources>
