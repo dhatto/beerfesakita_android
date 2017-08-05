@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ビアフェス秋田</string>
+    <string name="title_home">ポスター</string>
+    <string name="title_dashboard">参加ブルワリー</string>
+    <string name="title_notifications">イベント概要</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
