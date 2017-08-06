@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mashupnext.beerfesakita">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 使用している機能を宣言 -->
+    <uses-feature android:name="android.hardware.camera" >
+    </uses-feature>
+    <uses-feature android:name="android.hardware.camera.autofocus" >
+    </uses-feature>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +19,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/app_name" />
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider267412426697068"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.mashupnext.beerfesakita.FacebookSettingActivity"
+            android:label="@string/title_activity_facebook_setting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mashupnext.beerfesakita.CameraActivity"
+            android:label="@string/title_activity_camera">
+        </activity>
+        <activity
+            android:name="com.mashupnext.beerfesakita.PostActivity"
+            android:label="@string/title_activity_post"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.mashupnext.beerfesakita.OAuthActivity"
+            android:label="@string/title_activity_oauth"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="twitter" android:scheme="beerfesakita" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

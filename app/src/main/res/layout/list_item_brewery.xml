@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/list_item_schedule_margin"
+        android:padding="@dimen/list_item_schedule_margin" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/breweryImageView"
+            android:text="@string/title"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/title"
+            android:layout_alignParentTop="true"
+            android:text="@string/tag"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/drinkButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minHeight="@dimen/button_min_height"
+            android:minWidth="@dimen/button_min_width"
+            android:text="@string/drink" />
+
+        <ImageView
+            android:id="@+id/breweryImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/tag"
+            android:contentDescription="@string/content_description_beer"
+            android:scaleType="fitStart"
+            android:src="@drawable/beer" />
+
+    </RelativeLayout>
+</LinearLayout>
+

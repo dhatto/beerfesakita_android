@@ -64,6 +64,7 @@ public class BreweryListFragment extends Fragment implements AdapterView.OnItemC
 
         setSympleAdapter();
         ListView lv = getListView();
+        // 初期フォーカスを移動
         lv.setSelection(_selection);
     }
 
@@ -108,15 +109,17 @@ public class BreweryListFragment extends Fragment implements AdapterView.OnItemC
         list.setOnItemClickListener(this);
     }
 
+    // サイト名or飲んだボタンをクリック
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         ListView listView = (ListView)parent;
 
         HashMap<String,String> item = (HashMap<String,String>)listView.getItemAtPosition(position);
         String title = item.get("title");
-
+        // 飲んだボタンをクリック
         if(view.getClass().getName().equals("android.widget.Button")) {
             startPostActivity(title);
+        // サイト名をクリック
         } else {
             String[] siteList = this.getResources().getStringArray(R.array.brewery_site_list);
 
@@ -126,9 +129,9 @@ public class BreweryListFragment extends Fragment implements AdapterView.OnItemC
     }
 
     private void startPostActivity(String title) {
-//        Intent i = new Intent(getActivity(), PostActivity.class);
-//        i.putExtra("title", title);
-//        startActivityForResult(i, ACTIVITY_REQUEST_CODE_POST_PHOTO);
+        Intent i = new Intent(getActivity(), PostActivity.class);
+        i.putExtra("title", title);
+        startActivityForResult(i, ACTIVITY_REQUEST_CODE_POST_PHOTO);
     }
 
     private ListView getListView() {
