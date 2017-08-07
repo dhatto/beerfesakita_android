@@ -39,11 +39,11 @@
             <!--android:name="com.mashupnext.beerfesakita.CameraActivity"-->
             <!--android:label="@string/title_activity_camera">-->
         <!--</activity>-->
-        <!--<activity-->
-            <!--android:name="com.mashupnext.beerfesakita.PostActivity"-->
-            <!--android:label="@string/title_activity_post"-->
-            <!--android:screenOrientation="portrait" >-->
-        <!--</activity>-->
+        <activity
+            android:name="com.mashupnext.beerfesakita.PostActivity"
+            android:label="@string/title_activity_post"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <!--<activity-->
             <!--android:name="com.mashupnext.beerfesakita.OAuthActivity"-->
