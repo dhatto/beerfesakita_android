@@ -116,8 +116,13 @@ public class BreweryListFragment extends Fragment implements AdapterView.OnItemC
 
         HashMap<String,String> item = (HashMap<String,String>)listView.getItemAtPosition(position);
         String title = item.get("title");
+        String className = view.getClass().getName();
+
         // 飲んだボタンをクリック
-        if(view.getClass().getName().equals("android.widget.Button")) {
+        // ボタンクリックの場合 className = android.support.v7.widget.AppCompatButton
+        // セルクリックの場合   className = android.widget.LinearLayout
+        //if(view.getClass().getName().equals("android.widget.Button")) {
+        if(className.endsWith("Button")) {
             startPostActivity(title);
         // サイト名をクリック
         } else {
