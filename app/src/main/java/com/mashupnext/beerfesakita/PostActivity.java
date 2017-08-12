@@ -203,8 +203,10 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 	}
 
 	private void startCameraActivity() {
-		Intent i = new Intent(this, CameraActivity.class);
-		startActivityForResult(i, ActivityCode.REQUEST_CAMERA);
+//		Intent i = new Intent(this, CameraActivity.class);
+//		startActivityForResult(i, ActivityCode.REQUEST_CAMERA);
+		Intent i = new Intent(this, Camera2Activity.class);
+		startActivityForResult(i, 4);
 	}
 
 	@Override
