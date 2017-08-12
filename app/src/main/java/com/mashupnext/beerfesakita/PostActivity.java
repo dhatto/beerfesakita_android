@@ -4,9 +4,9 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-//import twitter4j.StatusUpdate;
-//import twitter4j.Twitter;
-//import twitter4j.TwitterException;
+import twitter4j.StatusUpdate;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
 
 //import com.facebook.AccessToken;
 //import com.facebook.FacebookCallback;
@@ -54,7 +54,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 	private static final String HASH_TAG = "#";
 	private final String PENDING_ACTION_BUNDLE_KEY = "com.mashupnext.beerfesakita:PendingAction";
 
-//	private Twitter _twitter;
+	private Twitter _twitter;
 	private EditText _postEditText;
 	private ImageButton _addPhotoButton;
 	private Button _postButton;
@@ -167,10 +167,10 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 				break;
 			case R.id.postButton:
 				v.setEnabled(false);
-//				postToSns();
+				postToSns();
 				break;
 			case R.id.twitterCheckBox:
-//				preparePostTwitterIfNeeded(v);
+				preparePostTwitterIfNeeded(v);
 				postButtonEnableSetting();
 				break;
 			case R.id.faceBookCheckBox:
@@ -249,28 +249,28 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 		}
 	}
 
-//	private void postToSns() {
-//		setSnsPostStatus();
-//
-//		if (!postToTwitter()) {
-//	//		postToFacebook();
-//		}
-//	}
+	private void postToSns() {
+		setSnsPostStatus();
 
-//	private Boolean postToTwitter() {
-//		Boolean result = false;
-//
-//		if ((_snsPostStatus & POST_TWITTER_MASK) == POST_TWITTER_MASK) {
-//			result = true;
-//	//		_twitter = TwitterUtils.getTwitterInstance(this);
-//			if (_photoUri != null) {
-//				postToTwitterWithPhoto();
-//			} else {
-//				tweet(getPostTextString());
-//			}
-//		}
-//		return result;
-//	}
+		if (!postToTwitter()) {
+	//		postToFacebook();
+		}
+	}
+
+	private Boolean postToTwitter() {
+		Boolean result = false;
+
+		if ((_snsPostStatus & POST_TWITTER_MASK) == POST_TWITTER_MASK) {
+			result = true;
+			_twitter = TwitterUtils.getTwitterInstance(this);
+			if (_photoUri != null) {
+				postToTwitterWithPhoto();
+			} else {
+				tweet(getPostTextString());
+			}
+		}
+		return result;
+	}
 
 //	private Boolean postToFacebook() {
 //		Boolean result = false;
@@ -360,71 +360,71 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 		}
 	}
 
-//	private void postToTwitterWithPhoto() {
-//		StatusUpdate status = new StatusUpdate(getPostTextString());
-//		byte[] byteArray = null;
-//		try {
-//			byteArray = Utility.scaleImage(this, _photoUri);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		_twitterPhotoStream = new ByteArrayInputStream(byteArray);
-//		status.setMedia("myMedia", _twitterPhotoStream);
-//		tweet(status);
-//	}
+	private void postToTwitterWithPhoto() {
+		StatusUpdate status = new StatusUpdate(getPostTextString());
+		byte[] byteArray = null;
+		try {
+			byteArray = Utility.scaleImage(this, _photoUri);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		_twitterPhotoStream = new ByteArrayInputStream(byteArray);
+		status.setMedia("myMedia", _twitterPhotoStream);
+		tweet(status);
+	}
 
-//	private void tweet(StatusUpdate status) {
-//		AsyncTask<StatusUpdate, Void, Boolean> task = new AsyncTask<StatusUpdate, Void, Boolean>() {
-//			@Override
-//			protected Boolean doInBackground(StatusUpdate... params) {
-//				try {
-//					_twitter.updateStatus(params[0]);
-//					return true;
-//				} catch (TwitterException e) {
-//					e.printStackTrace();
-//					return false;
-//				}
-//			}
-//
-//			@Override
-//			protected void onPostExecute(Boolean result) {
-//				if (result) {
-//					try {
-//						_twitterPhotoStream.close();
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//				_snsPostStatus ^= POST_TWITTER_MASK;
-//				//PostActivity.this.postToFacebook();
-//			}
-//		};
-//
-//		task.execute(status);
-//	}
+	private void tweet(StatusUpdate status) {
+		AsyncTask<StatusUpdate, Void, Boolean> task = new AsyncTask<StatusUpdate, Void, Boolean>() {
+			@Override
+			protected Boolean doInBackground(StatusUpdate... params) {
+				try {
+					_twitter.updateStatus(params[0]);
+					return true;
+				} catch (TwitterException e) {
+					e.printStackTrace();
+					return false;
+				}
+			}
 
-//	private void tweet(String text) {
-//		AsyncTask<String, Void, Boolean> task = new AsyncTask<String, Void, Boolean>() {
-//			@Override
-//			protected Boolean doInBackground(String... params) {
-//				try {
-//		//			_twitter.updateStatus(params[0]);
-//					return true;
-//				} catch (TwitterException e) {
-//					e.printStackTrace();
-//					return false;
-//				}
-//			}
-//
-//			@Override
-//			protected void onPostExecute(Boolean result) {
-//				_snsPostStatus ^= POST_TWITTER_MASK;
-//				//PostActivity.this.postToFacebook();
-//			}
-//		};
-//
-//		task.execute(text);
-//	}
+			@Override
+			protected void onPostExecute(Boolean result) {
+				if (result) {
+					try {
+						_twitterPhotoStream.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				_snsPostStatus ^= POST_TWITTER_MASK;
+				//PostActivity.this.postToFacebook();
+			}
+		};
+
+		task.execute(status);
+	}
+
+	private void tweet(String text) {
+		AsyncTask<String, Void, Boolean> task = new AsyncTask<String, Void, Boolean>() {
+			@Override
+			protected Boolean doInBackground(String... params) {
+				try {
+					_twitter.updateStatus(params[0]);
+					return true;
+				} catch (TwitterException e) {
+					e.printStackTrace();
+					return false;
+				}
+			}
+
+			@Override
+			protected void onPostExecute(Boolean result) {
+				_snsPostStatus ^= POST_TWITTER_MASK;
+				//PostActivity.this.postToFacebook();
+			}
+		};
+
+		task.execute(text);
+	}
 
 	private void preparePostTwitter() {
 		if (!TwitterUtils.hasAccessToken(this)) {
@@ -460,8 +460,8 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 //			Intent i = new Intent(this, FacebookSettingActivity.class);
 //			startActivity(i);
 		} else if (dialog == _twitterAuthAlertDialog) {
-//			Intent intent = new Intent(this, OAuthActivity.class);
-//			startActivity(intent);
+			Intent intent = new Intent(this, OAuthActivity.class);
+			startActivity(intent);
 		}
 	}
 }
