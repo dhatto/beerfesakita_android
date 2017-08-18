@@ -18,6 +18,7 @@ import twitter4j.TwitterException;
 //import com.facebook.share.Sharer;
 //import com.facebook.share.model.SharePhoto;
 //import com.facebook.share.model.SharePhotoContent;
+import com.mashupnext.beerfesakita.utility.BitmapUtility;
 import com.mashupnext.beerfesakita.utility.Utility;
 
 import android.graphics.Bitmap;
@@ -39,6 +40,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.mashupnext.beerfesakita.social.TwitterUtils;
+
+import android.media.Image;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -206,7 +209,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 //		Intent i = new Intent(this, CameraActivity.class);
 //		startActivityForResult(i, ActivityCode.REQUEST_CAMERA);
 		Intent i = new Intent(this, Camera2Activity.class);
-		startActivityForResult(i, 4);
+		startActivityForResult(i, ActivityCode.REQUEST_CAMERA);
 	}
 
 	@Override
