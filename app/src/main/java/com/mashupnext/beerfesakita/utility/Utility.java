@@ -94,11 +94,14 @@ public class Utility extends Application {
 
         String type = context.getContentResolver().getType(photoUri);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        if (type.equals("image/png")) {
-            srcBitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-        } else if (type.equals("image/jpg") || type.equals("image/jpeg")) {
+        // nullはjpgとみなす
+        if(type == null) {
             srcBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         }
+//        if (type.equals("image/png")) {
+//            srcBitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+//        } else if (type.equals("image/jpg") || type.equals("image/jpeg")) {
+//            srcBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);//        }
 
         byte[] bMapArray = baos.toByteArray();
         baos.close();
@@ -110,6 +113,10 @@ public class Utility extends Application {
         /* it's on the external media. */
         Cursor cursor = context.getContentResolver().query(photoUri,
                 new String[] { MediaStore.Images.ImageColumns.ORIENTATION }, null, null, null);
+
+        if(cursor == null) {
+            return 0;
+        }
 
         if (cursor.getCount() != 1) {
             return -1;
