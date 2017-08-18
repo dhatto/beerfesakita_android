@@ -58,6 +58,9 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+import android.content.Intent;
+import android.net.Uri;
+import com.mashupnext.beerfesakita.utility.BitmapUtility;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -152,6 +155,7 @@ public class Camera2BasicFragment extends Fragment
 
         @Override
         public void onSurfaceTextureUpdated(SurfaceTexture texture) {
+
         }
 
     };
@@ -234,6 +238,9 @@ public class Camera2BasicFragment extends Fragment
      */
     private File mFile;
 
+    //public Image mImage;
+    private Activity mActivity = null;
+
     /**
      * This a callback object for the {@link ImageReader}. "onImageAvailable" will be called when a
      * still image is ready to be saved.
@@ -244,9 +251,32 @@ public class Camera2BasicFragment extends Fragment
         @Override
         public void onImageAvailable(ImageReader reader) {
             mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
-        }
+            //mImage = reader.acquireNextImage();
 
+            // IntentではImageは渡せないかも（メモリの関係）。なのでURIを渡す
+            Intent intent = new Intent();
+            // mFileのURIはjava.net.URIなので、android.net.URIに変換が必要
+            java.net.URI imgeUrl = mFile.toURI();
+            Uri androidUriB = Uri.parse(imgeUrl.toString());
+
+            intent.setData(androidUriB);
+            //convert(mFile.toString());
+            mActivity.setResult(Activity.RESULT_OK, intent);
+            mActivity.finish();
+        }
     };
+
+//    private void convert(String path) {
+//        //String path = "http://anonymous@192.168.0.1:8888/main.html?id=00001#fragment";
+//        //Uri androidUriA = Uri.parse(path);
+//        //URI javaUriA = URI.create(androidUriA.toString());
+//        //Log.i(TAG, "A " + javaUriA.toString());
+//
+//        java.net.URI javaUriB = java.net.URI.create(path);
+//        Uri androidUriB = Uri.parse(javaUriB.toString());
+//
+//        Log.i(TAG, "B " + androidUriB.toString());
+//    }
 
     /**
      * {@link CaptureRequest.Builder} for the camera preview
@@ -279,6 +309,14 @@ public class Camera2BasicFragment extends Fragment
      * Orientation of the camera sensor
      */
     private int mSensorOrientation;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if (activity instanceof Camera2Activity) {
+            this.mActivity = activity;
+        }
+    }
 
     /**
      * A {@link CameraCaptureSession.CaptureCallback} that handles events related to JPEG capture.
@@ -913,7 +951,7 @@ public class Camera2BasicFragment extends Fragment
     /**
      * Saves a JPEG {@link Image} into the specified {@link File}.
      */
-    private static class ImageSaver implements Runnable {
+    public static class ImageSaver implements Runnable {
 
         /**
          * The JPEG image
