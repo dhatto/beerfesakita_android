@@ -3,8 +3,6 @@
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
-
-
     <string name="app_name">ビアフェス秋田</string>
     <string name="title_home">ポスター</string>
     <string name="title_dashboard">参加ブルワリー</string>
@@ -73,7 +71,6 @@
         <item>http://blog.ushitora.jp/</item>
         <item>http://www.coedobrewery.com/</item>
         <item>http://www.ikspiari.com/shop/harvest/index.html</item>
-        <item>http://www.yokohamabeer.com/</item>
         <item>http://www.sanktgallenbrewery.com/</item>
         <item>http://www.kumazawa.jp/shonan-beer/</item>
         <item>http://www.hakone-beer.com/</item>
@@ -89,9 +86,8 @@
         <item>http://ameblo.jp/y-market758/</item>
         <item>http://www.biyagura.jp/</item>
         <item>http://www.minoh-beer.jp/</item>
-        <item>http://www.konishi.be/</item>
         <item>http://www.nagisa.co.jp/</item>
-        <item>http://www.miyajima-beer.com/</item>
+        <item>http://www.kurebeer.com/beerkan_top.html</item>
         <item>http://g-beer.jp/gbeer/</item>
         <item>http://www.rakuten.co.jp/beerhearun/</item>
         <item>http://www.umenishiki.com/products/promotions/beer/tokusyu.html</item>
@@ -99,6 +95,7 @@
         <item>http://www.hideji-beer.jp/</item>
         <item>http://www.shiroyama-g.co.jp/promotion/brewery/</item>
         <item>http://www.helios-syuzo.co.jp/</item>
+        <item>http://www.aqbevolution.com/</item>
     </string-array>
 
     <string-array name="brewery_list">
@@ -121,7 +118,6 @@
         <item>うしとらブルワリー</item>
         <item>コエドブルワリー</item>
         <item>ハーヴェスト・ムーン</item>
-        <item>横浜ビール</item>
         <item>サンクトガーレン</item>
         <item>湘南ビール</item>
         <item>箱根ビール</item>
@@ -137,9 +133,8 @@
         <item>Y.Marketブルワリー</item>
         <item>伊勢角屋麦酒</item>
         <item>箕面ビール</item>
-        <item>KONISHIビール</item>
         <item>ナギサビール</item>
-        <item>宮島ビール</item>
+        <item>海軍さんの麦酒</item>
         <item>大山Gビール</item>
         <item>松江地ビールビアへるん</item>
         <item>梅錦ビール</item>
@@ -147,6 +142,7 @@
         <item>ひでじビール</item>
         <item>城山ブルワリー</item>
         <item>ヘリオスビール</item>
+        <item>AQベボリューション</item>
     </string-array>
 
     <string-array name="brewery_place_list">
@@ -185,16 +181,15 @@
         <item>愛知県</item>
         <item>三重県</item>
         <item>大阪府</item>
-        <item>兵庫県</item>
         <item>和歌山県</item>
         <item>広島県</item>
-        <item>鳥取県</item>
         <item>島根県</item>
         <item>愛媛県</item>
         <item>福岡県</item>
         <item>宮崎県</item>
         <item>鹿児島県</item>
         <item>沖縄県</item>
+        <item>海外</item>
     </string-array>
 
     <string-array name="event_list">

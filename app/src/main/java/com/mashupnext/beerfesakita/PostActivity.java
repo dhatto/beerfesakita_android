@@ -137,7 +137,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 		findViewById(R.id.cancelButton).setOnClickListener(this);
 		findViewById(R.id.postButton).setOnClickListener(this);
 		findViewById(R.id.twitterCheckBox).setOnClickListener(this);
-		findViewById(R.id.faceBookCheckBox).setOnClickListener(this);
+		//findViewById(R.id.faceBookCheckBox).setOnClickListener(this);
 	}
 
 	private void initWidget() {
@@ -176,10 +176,10 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 				preparePostTwitterIfNeeded(v);
 				postButtonEnableSetting();
 				break;
-			case R.id.faceBookCheckBox:
+//			case R.id.faceBookCheckBox:
 //				preparePostFacebookIfNeeded(v);
-				postButtonEnableSetting();
-				break;
+//				postButtonEnableSetting();
+//				break;
 		}
 	}
 
@@ -199,10 +199,12 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 
 	private void postButtonEnableSetting() {
 		CheckBox twitterCheckBox = (CheckBox) findViewById(R.id.twitterCheckBox);
-		CheckBox facebookCheckBox = (CheckBox) findViewById(R.id.faceBookCheckBox);
-		_postButton.setEnabled(
-				twitterCheckBox.isChecked() || facebookCheckBox.isChecked()
-		);
+		_postButton.setEnabled(twitterCheckBox.isChecked());
+
+		//CheckBox facebookCheckBox = (CheckBox) findViewById(R.id.faceBookCheckBox);
+//		_postButton.setEnabled(
+//				twitterCheckBox.isChecked() || facebookCheckBox.isChecked()
+//		);
 	}
 
 	private void startCameraActivity() {
@@ -243,15 +245,15 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 
 	private void setSnsPostStatus() {
 		CheckBox cbTwitter = (CheckBox) findViewById(R.id.twitterCheckBox);
-		CheckBox cbFacebook = (CheckBox) findViewById(R.id.faceBookCheckBox);
+		//CheckBox cbFacebook = (CheckBox) findViewById(R.id.faceBookCheckBox);
 		_snsPostStatus = POST_FIX_MASK;
 
 		if (cbTwitter.isChecked()) {
 			_snsPostStatus |= POST_TWITTER_MASK;
 		}
-		if (cbFacebook.isChecked()) {
-			_snsPostStatus |= POST_FACEBOOK_MASK;
-		}
+//		if (cbFacebook.isChecked()) {
+//			_snsPostStatus |= POST_FACEBOOK_MASK;
+//		}
 	}
 
 	private void postToSns() {
@@ -259,6 +261,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 
 		if (!postToTwitter()) {
 	//		postToFacebook();
+			finish();
 		}
 	}
 
@@ -444,10 +447,10 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 //		}
 //	}
 
-	private void alertFacebookAuthError() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		_facebookAuthAlertDialog = builder.setTitle("確認").setMessage("次の画面でFacebookにログインし、認証を行って下さい。").setPositiveButton("OK", this).show();
-	}
+//	private void alertFacebookAuthError() {
+//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//		_facebookAuthAlertDialog = builder.setTitle("確認").setMessage("次の画面でFacebookにログインし、認証を行って下さい。").setPositiveButton("OK", this).show();
+//	}
 
 	private void alertTwitterAuthError() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
