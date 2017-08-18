@@ -261,7 +261,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 
 		if (!postToTwitter()) {
 	//		postToFacebook();
-			finish();
+			PostActivity.this.finish();
 		}
 	}
 
@@ -404,7 +404,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 					}
 				}
 				_snsPostStatus ^= POST_TWITTER_MASK;
-				//PostActivity.this.postToFacebook();
+				PostActivity.this.finish();
 			}
 		};
 
@@ -427,7 +427,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 			@Override
 			protected void onPostExecute(Boolean result) {
 				_snsPostStatus ^= POST_TWITTER_MASK;
-				//PostActivity.this.postToFacebook();
+				PostActivity.this.finish();
 			}
 		};
 
