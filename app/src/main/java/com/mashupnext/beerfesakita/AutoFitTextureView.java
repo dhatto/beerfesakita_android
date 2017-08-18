@@ -57,6 +57,10 @@ public class AutoFitTextureView extends TextureView {
         requestLayout();
     }
 
+    /* onMeasureですべきことは以下の2つです（ViewGroupの場合）
+    子Viewのサイズを measureメソッドを用い、適切なサイズに設定する
+    引数や子Viewから、自分自身のサイズを setMeasuredDimension で確定させる
+    */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -72,5 +76,4 @@ public class AutoFitTextureView extends TextureView {
             }
         }
     }
-
 }
