@@ -8,9 +8,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-    //private TextView mTextMessage;
-
+    
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                     setBreweryListFragment();
                     return true;
                 case R.id.navigation_notifications:
-                    //mTextMessage.setText(R.string.title_notifications);
+                    setEventInfoFragment();
                     return true;
             }
             return false;
@@ -41,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
     }
 
+    private void setEventInfoFragment() {
+        EventInfoFragment fragment = EventInfoFragment.newInstance();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             setPosterFragment();
         }
 
-//        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
