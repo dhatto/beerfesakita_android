@@ -53,7 +53,7 @@
 
     <string-array name="brewery_site_list">
         <item>http://www.2002cb.co.jp/</item>
-        <item>http://www.wakasaimo.com/onidensetsu/</item>
+        <item>https://www.wakasaimo.com/shop/noboribetsubeer/</item>
         <item>http://www.oirase.or.jp/beer/beer.htm</item>
         <item>http://www.sekinoichi.co.jp/beer/</item>
         <item>http://www.sakurabrewery.beer/</item>
@@ -62,7 +62,7 @@
         <item>http://www.warabi.or.jp/beer/top.php</item>
         <item>http://www.aqula.co.jp/</item>
         <item>http://aka.gmobb.jp/yakurai/products/beer/index.html</item>
-        <item>http://www.onikoube.com/shop/</item>
+        <item>http://www.onikoube.com/fukiage/alcohol</item>
         <item>http://www.ja-miyagisennan.jp/einou/1417.html</item>
         <item>http://www.gassan-shop.com/</item>
         <item>http://www.f-beer.com/</item>
@@ -81,12 +81,14 @@
         <item>http://www.tamamura-honten.co.jp/</item>
         <item>http://www.tomi-kosya.com/ohlaho-beer/ohlaho-beer.html</item>
         <item>http://yonasato.com/</item>
-        <item>http://www.ms-beer.co.jp/index.html</item>
+        <item>http://ms-beer.co.jp/</item>
         <item>http://beerbuddy.blog.fc2.com/</item>
         <item>http://ameblo.jp/y-market758/</item>
         <item>http://www.biyagura.jp/</item>
         <item>http://www.minoh-beer.jp/</item>
+        <item>http://www.konishi.be/</item>
         <item>http://www.nagisa.co.jp/</item>
+        <item>http://www.miyajima-beer.com/</item>
         <item>http://www.kurebeer.com/beerkan_top.html</item>
         <item>http://g-beer.jp/gbeer/</item>
         <item>http://www.rakuten.co.jp/beerhearun/</item>
@@ -127,13 +129,15 @@
         <item>富士桜高原麦酒</item>
         <item>志賀高原ビール</item>
         <item>オラホビール</item>
-        <item>よなよなエール</item>
+        <item>ヤッホーブルーイング</item>
         <item>南信州ビール</item>
         <item>ビアバディ</item>
         <item>Y.Marketブルワリー</item>
         <item>伊勢角屋麦酒</item>
         <item>箕面ビール</item>
+        <item>KONISHIビール</item>
         <item>ナギサビール</item>
+        <item>宮島ビール</item>
         <item>海軍さんの麦酒</item>
         <item>大山Gビール</item>
         <item>松江地ビールビアへるん</item>
@@ -168,7 +172,6 @@
         <item>神奈川県</item>
         <item>神奈川県</item>
         <item>神奈川県</item>
-        <item>神奈川県</item>
         <item>新潟県</item>
         <item>富山県</item>
         <item>石川県</item>
@@ -181,8 +184,11 @@
         <item>愛知県</item>
         <item>三重県</item>
         <item>大阪府</item>
+        <item>兵庫県</item>
         <item>和歌山県</item>
         <item>広島県</item>
+        <item>広島県</item>
+        <item>鳥取県</item>
         <item>島根県</item>
         <item>愛媛県</item>
         <item>福岡県</item>
