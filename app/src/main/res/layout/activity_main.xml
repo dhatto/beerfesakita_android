@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mashupnext.beerfesakita.MainActivity">
+    tools:context="com.mashupnext.beerfesakita2.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"

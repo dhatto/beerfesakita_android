@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -18,8 +18,8 @@ import twitter4j.TwitterException;
 //import com.facebook.share.Sharer;
 //import com.facebook.share.model.SharePhoto;
 //import com.facebook.share.model.SharePhotoContent;
-import com.mashupnext.beerfesakita.utility.BitmapUtility;
-import com.mashupnext.beerfesakita.utility.Utility;
+import com.mashupnext.beerfesakita2.utility.BitmapUtility;
+import com.mashupnext.beerfesakita2.utility.Utility;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -39,7 +39,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.mashupnext.beerfesakita.social.TwitterUtils;
+import com.mashupnext.beerfesakita2.social.TwitterUtils;
 
 import android.media.Image;
 
@@ -55,7 +55,7 @@ public class PostActivity extends Activity implements OnClickListener, DialogInt
 
 	private static final String HASH_TAG_BEERFES_AKITA = " #秋田ビアフェス";
 	private static final String HASH_TAG = "#";
-	private final String PENDING_ACTION_BUNDLE_KEY = "com.mashupnext.beerfesakita:PendingAction";
+	private final String PENDING_ACTION_BUNDLE_KEY = "com.mashupnext.beerfesakita2:PendingAction";
 
 	private Twitter _twitter;
 	private EditText _postEditText;

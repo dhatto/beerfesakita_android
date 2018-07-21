@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -13,7 +13,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.view.Menu;
-import com.mashupnext.beerfesakita.social.*;
+import com.mashupnext.beerfesakita2.social.*;
 
 public class OAuthActivity extends Activity implements OnClickListener {
 	private String mCallbackURL;

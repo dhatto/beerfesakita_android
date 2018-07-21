@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mashupnext.beerfesakita", appContext.getPackageName());
+        assertEquals("com.mashupnext.beerfesakita2", appContext.getPackageName());
     }
 }

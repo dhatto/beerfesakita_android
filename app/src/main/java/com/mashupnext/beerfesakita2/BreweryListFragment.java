@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;

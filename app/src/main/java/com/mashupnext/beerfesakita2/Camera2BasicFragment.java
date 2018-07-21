@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 
 import android.Manifest;
 import android.app.Activity;
@@ -60,7 +60,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import android.content.Intent;
 import android.net.Uri;
-import com.mashupnext.beerfesakita.utility.BitmapUtility;
+import com.mashupnext.beerfesakita2.utility.BitmapUtility;
 
 import java.io.File;
 import java.io.FileOutputStream;

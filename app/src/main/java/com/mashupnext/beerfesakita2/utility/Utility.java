@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mashupnext.beerfesakita.utility;
+package com.mashupnext.beerfesakita2.utility;
 
 import android.app.Application;
 import android.content.Context;

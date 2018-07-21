@@ -1,9 +1,9 @@
-package com.mashupnext.beerfesakita.social;
+package com.mashupnext.beerfesakita2.social;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
-import com.mashupnext.beerfesakita.R;
+import com.mashupnext.beerfesakita2.R;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

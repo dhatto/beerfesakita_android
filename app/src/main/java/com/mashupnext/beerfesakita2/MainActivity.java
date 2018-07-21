@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita;
+package com.mashupnext.beerfesakita2;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

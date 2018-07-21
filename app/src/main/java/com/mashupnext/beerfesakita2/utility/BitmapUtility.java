@@ -1,4 +1,4 @@
-package com.mashupnext.beerfesakita.utility;
+package com.mashupnext.beerfesakita2.utility;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
