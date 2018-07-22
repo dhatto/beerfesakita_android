@@ -62,7 +62,7 @@
         <activity
             android:name=".OAuthActivity"
             android:label="@string/title_activity_oauth"
-            android:launchMode="singleTask"
+            android:launchMode="singleInstance"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -70,11 +70,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="twitter"
-                    android:scheme="beerfesakita" />
+                <data android:scheme="twittersdk" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

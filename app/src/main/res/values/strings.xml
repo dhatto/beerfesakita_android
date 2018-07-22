@@ -31,7 +31,12 @@
     <string name="facebook_profile">FacebookProfile</string>
     <string name="twitter_consumer_key">l44tIZ6eMNeNr8e180nQ</string>
     <string name="twitter_consumer_secret">klCbJaGgkr7Odfked4chl1TfqVoc6MN4zrQfQw0</string>
-    <string name="twitter_callback_url">beerfesakita://twitter</string>
+
+    <!--<string name="twitter_callback_url">beerfesakita://twitter</string> 画面が出ない-->
+    <!--<string name="twitter_callback_url">twitterkit-l44tIZ6eMNeNr8e180nQ://</string> Web認証画面から戻ってこない-->
+    <!--<string name="twitter_callback_url">beerfesakita-l44tIZ6eMNeNr8e180nQ:// Web認証画面から戻ってこない</string>-->
+    <string name="twitter_callback_url">twittersdk://</string>
+
     <string name="addPhoto">写真追加</string>
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
@@ -52,8 +57,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="brewery_site_list">
-        <item>http://www.2002cb.co.jp/</item>
-        <item>https://www.wakasaimo.com/shop/noboribetsubeer/</item>
+        <item>https://northislandbeer.jp//</item>
+        <item>https://www.wakasaimo.com/</item>
         <item>http://www.oirase.or.jp/beer/beer.htm</item>
         <item>http://www.sekinoichi.co.jp/beer/</item>
         <item>http://www.sakurabrewery.beer/</item>
@@ -67,10 +72,10 @@
         <item>http://www.gassan-shop.com/</item>
         <item>http://www.f-beer.com/</item>
         <item>http://www.g-select.info/user_data/beer.php</item>
-        <item>http://www.ch-kamiya.jp/shop/liquor/brewery.html</item>
+        <item>http://www.oenon.jp/ushiku-chateau/shop/brewery/</item>
         <item>http://blog.ushitora.jp/</item>
         <item>http://www.coedobrewery.com/</item>
-        <item>http://www.ikspiari.com/shop/harvest/index.html</item>
+        <item>https://www.ikspiari.com/harvestmoon/</item>
         <item>http://www.sanktgallenbrewery.com/</item>
         <item>http://www.kumazawa.jp/shonan-beer/</item>
         <item>http://www.hakone-beer.com/</item>
@@ -86,9 +91,7 @@
         <item>http://ameblo.jp/y-market758/</item>
         <item>http://www.biyagura.jp/</item>
         <item>http://www.minoh-beer.jp/</item>
-        <item>http://www.konishi.be/</item>
         <item>http://www.nagisa.co.jp/</item>
-        <item>http://www.miyajima-beer.com/</item>
         <item>http://www.kurebeer.com/beerkan_top.html</item>
         <item>http://g-beer.jp/gbeer/</item>
         <item>http://www.rakuten.co.jp/beerhearun/</item>
@@ -109,14 +112,14 @@
         <item>遠野麦酒ZUMONA</item>
         <item>湖畔の杜ビール</item>
         <item>田沢湖ビール</item>
-        <item>あくらビール</item>
+        <item>秋田あくらビール</item>
         <item>やくらいビール</item>
-        <item>鳴子の風</item>
+        <item>鳴子温泉ブルワリー</item>
         <item>仙南クラフトビール</item>
         <item>地ビール月山</item>
-        <item>みちのく福島路ビール</item>
+        <item>福島路ビール</item>
         <item>猪苗代地ビール</item>
-        <item>牛久シャトービール</item>
+        <item>シャトーカミヤ</item>
         <item>うしとらブルワリー</item>
         <item>コエドブルワリー</item>
         <item>ハーヴェスト・ムーン</item>
@@ -125,27 +128,25 @@
         <item>箱根ビール</item>
         <item>スワンレイクビール</item>
         <item>城端麦酒</item>
-        <item>奥能登ビール_日本海倶楽部</item>
+        <item>日本海倶楽部</item>
         <item>富士桜高原麦酒</item>
         <item>志賀高原ビール</item>
         <item>オラホビール</item>
         <item>ヤッホーブルーイング</item>
         <item>南信州ビール</item>
         <item>ビアバディ</item>
-        <item>Y.Marketブルワリー</item>
+        <item>Y.MarketBrewing</item>
         <item>伊勢角屋麦酒</item>
         <item>箕面ビール</item>
-        <item>KONISHIビール</item>
         <item>ナギサビール</item>
-        <item>宮島ビール</item>
         <item>海軍さんの麦酒</item>
         <item>大山Gビール</item>
-        <item>松江地ビールビアへるん</item>
+        <item>松江ビアへるん</item>
         <item>梅錦ビール</item>
         <item>門司港地ビール工房</item>
-        <item>ひでじビール</item>
+        <item>宮崎ひでじビール</item>
         <item>城山ブルワリー</item>
-        <item>ヘリオスビール</item>
+        <item>ヘリオスクラフトビール</item>
         <item>AQベボリューション</item>
     </string-array>
 
@@ -184,9 +185,7 @@
         <item>愛知県</item>
         <item>三重県</item>
         <item>大阪府</item>
-        <item>兵庫県</item>
         <item>和歌山県</item>
-        <item>広島県</item>
         <item>広島県</item>
         <item>鳥取県</item>
         <item>島根県</item>
@@ -199,8 +198,8 @@
     </string-array>
 
     <string-array name="event_list">
-        <item>開催日：2017.08.26 12:00-20:00 / 2017.08.27 10:00-17:00</item>
-        <item>開催場所：秋田駅西口 アゴラ広場</item>
+        <item>開催日：2018.08.18 11:00-20:00 / 2018.08.19 11:00-17:00</item>
+        <item>開催場所：秋田駅西口 大屋根下とアゴラ広場</item>
     </string-array>
     <string-array name="event_list_tag">
         <item></item>
